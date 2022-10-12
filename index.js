@@ -7,10 +7,10 @@ canvas.height = 64 * 9 //576
 const gravity = 0.5
 
 class Platform {
-    constructor() {
+    constructor({ x, y }) {
         this.position = {
-            x: 200,
-            y: 400,
+            x,
+            y,
         }
         this.width = 200
         this.height = 20
@@ -23,8 +23,7 @@ class Platform {
 
 const player = new Player()
 
-const platform = new Platform()
-
+const platforms = [new Platform({x: 200, y: 400}), new Platform({x: 400, y: 200})]
 
 const keys = {
     a:{
@@ -48,17 +47,25 @@ function animate() {
         player.velocity.x = -4
     } else {
         if (keys.d.pressed) {
-            platform.position.x -= 4
+            platforms.forEach(platform => {
+                platform.position.x -= 4
+            })
         } else if (keys.a.pressed) {
-            platform.position.x += 4
+            platforms.forEach(platform => {
+                platform.position.x += 4
+            })
         }
     }
     
     player.update()
-    platform.draw()
-
-    if (player.position.y + player.height <= platform.position.y && player.position.y + player.height + player.velocity.y >= platform.position.y && player.position.x + player.width >= platform.position.x && player.position.x <= platform.position.x + platform.width) {
-        player.velocity.y = 0
-    } // platform collision detection
+    platforms.forEach(platform => {
+        platform.draw()
+    })
+    
+    platforms.forEach(platform => {
+        if (player.position.y + player.height <= platform.position.y && player.position.y + player.height + player.velocity.y >= platform.position.y && player.position.x + player.width >= platform.position.x && player.position.x <= platform.position.x + platform.width) {
+            player.velocity.y = 0
+        } // platform collision detection
+    })
 }
 animate()
