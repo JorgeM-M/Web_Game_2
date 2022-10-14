@@ -7,13 +7,28 @@
     <title>Mario Copycat</title>
     <link rel="stylesheet" href="styles.css">
 <body>
-    <h1>Sidescroller Platformer</h1>
+    <div class="container">
+        <header>
+            <h1>Sidescroller Platformer</h1>
+            <div class="counters">
+                <div class="counter"> coins/points </div>
+                <div class="counter"> distance </div>
+                <div class="counter" id="deaths"></div>
+                <div class="counter"> win/level </div>
+            </div>
+        </header>
+        <main>
+            <canvas id="canvas1"></canvas>
+        </main>
+      </div>
+    
     <p>hello</p>
-    <canvas></canvas>
+    
 </body>
 <script src="js/classes/Player.js"></script>
 <script src="js/event_listeners.js"></script>
-<script src=""></script>
+<script src="js/classes/Platform.js"></script>
+<script src="js/classes/Jumper.js"></script>
 <script src=""></script>
 <script src="index.js"></script>
 </html>
