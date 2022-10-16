@@ -11,24 +11,30 @@
         <header>
             <h1>Sidescroller Platformer</h1>
             <div class="counters">
-                <div class="counter"> coins/points </div>
-                <div class="counter"> distance </div>
                 <div class="counter" id="deaths"></div>
-                <div class="counter"> win/level </div>
+                <div class="counter" id="wins"></div>
             </div>
         </header>
         <main>
-            <canvas id="canvas1"></canvas>
+            <canvas id="canvas1">
+                <player>
+                    <script src="js/classes/Player.js"></script>
+                </player>
+                <platform>
+                    <script src="js/classes/Platform.js"></script>
+                </platform>
+                <jumper>
+                    <script src="js/classes/Jumper.js"></script>
+                </jumper>
+            </canvas>
         </main>
       </div>
     
     <p>hello</p>
     
 </body>
-<script src="js/classes/Player.js"></script>
+
 <script src="js/event_listeners.js"></script>
-<script src="js/classes/Platform.js"></script>
-<script src="js/classes/Jumper.js"></script>
 <script src=""></script>
 <script src="index.js"></script>
 </html>
