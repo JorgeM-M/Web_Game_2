@@ -16,7 +16,7 @@ class Player {
     }
 
     draw() {
-        c.fillStyle = "aqua"
+        c.fillStyle = "rgb(188, 108, 51)"
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
     }
     

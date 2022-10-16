@@ -131,7 +131,7 @@ function animate() {
     if (scrollOffset == 2000) {
         console.log("You Win") //win condition
         winAdd()
-        document.getElementById("wins").innerHTML = "Wins: " + winCount;
+        document.getElementById("wins").innerHTML = "Wins: " + winCount; // disable controls
     } 
 
     if (player.position.y > canvas.height) {

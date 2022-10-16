@@ -9,5 +9,8 @@ controls are wasd
 "s" = 
 "d" = right
 
-assets and sprites = https://pixelfrog-assets.itch.io/pixel-adventure-1
+sprites = 
 
+clear button clears the scoreboard
+
+reatart button restarts the game but does not clear the score
