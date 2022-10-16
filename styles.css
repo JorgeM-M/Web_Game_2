@@ -17,10 +17,10 @@ main {
 }
 
 canvas {
-    background: rgb(251,110,63);
+    /* background: rgb(251,110,63); */
     background: linear-gradient(25deg, rgb(63, 195, 251) 59%, rgb(240, 252, 70) 100%);
 }
 
-platform {
-    background: green;
+.clear {
+    margin: 24px
 }

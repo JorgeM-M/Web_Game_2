@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Copycat</title>
+    <title>Sidescroller Platformer</title>
     <link rel="stylesheet" href="styles.css">
 <body>
     <div class="container">
@@ -17,21 +17,19 @@
         </header>
         <main>
             <canvas id="canvas1">
-                <player>
+                <div class="player">
                     <script src="js/classes/Player.js"></script>
-                </player>
-                <platform>
+                </div>
+                <div class="platform">
                     <script src="js/classes/Platform.js"></script>
-                </platform>
-                <jumper>
+                </div>
+                <div class="jumper">
                     <script src="js/classes/Jumper.js"></script>
-                </jumper>
+                </div>
             </canvas>
         </main>
+        <div class="clear">Clear Button</div>
       </div>
-    
-    <p>hello</p>
-    
 </body>
 
 <script src="js/event_listeners.js"></script>

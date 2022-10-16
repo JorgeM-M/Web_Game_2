@@ -8,7 +8,7 @@ class Jumper {
         this.height = 20
     }
     draw() {
-        c.fillStyle = "green"
+        c.fillStyle = "rgb(60, 62, 60)"
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
     }
 }

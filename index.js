@@ -9,7 +9,7 @@ let gravity = 0.5
 let player = new Player()
 
 // min height 576 
-// max height 1024
+// max height 0
 //platform poositions
 let platforms = [
     new Platform({x: 0, y: 556}), 
@@ -127,6 +127,7 @@ function animate() {
         } 
     })
 
+    //distance for win
     if (scrollOffset == 2000) {
         console.log("You Win") //win condition
         winAdd()
