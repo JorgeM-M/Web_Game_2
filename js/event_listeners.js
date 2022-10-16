@@ -26,3 +26,13 @@ addEventListener("keyup", (event) => {
             break
     }
 })
+
+
+document.getElementById("clear").addEventListener("click", function(e){
+    //Reset global variables to 0
+    deathCount = 0;
+    winCount = 0;
+    //Update the scoreboard (same logic as in flip button click handler)
+    document.getElementById("deaths").innerHTML = "Deaths: " + deathCount;
+    document.getElementById("wins").innerHTML = "Wins: " + winCount;
+})

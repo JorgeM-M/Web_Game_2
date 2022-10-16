@@ -149,3 +149,5 @@ animate()
 
 document.getElementById("deaths").innerHTML = "Deaths: " + deathCount;
 document.getElementById("wins").innerHTML = "Wins: " + winCount;
+
+// localStorage.setItem("deathCount", "winCount")
