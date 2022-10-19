@@ -14,17 +14,29 @@ let player = new Player()
 let platforms = [
     new Platform({x: 0, y: 556}), 
     new Platform({x: 400, y: 556}),
-    // new Platform({x: 800, y: 556}),
-    // new Platform({x: 1200, y: 556}),
-    // new Platform({x: 1600, y: 556}), 
+    // new Platform({x: 800, y: 556}), //
+    // new Platform({x: 1200, y: 556}), //
+    // new Platform({x: 1600, y: 556}), //
     new Platform({x: 2000, y: 556}),
+    new Platform({x: 2400, y: 556}),
+    new Platform({x: 2400, y: 420}),
+    new Platform({x: 2800, y: 420}),
+    // new Platform({x: 3200, y: 556}), //
+    // new Platform({x: 3600, y: 556}), //
+    // new Platform({x: 4000, y: 556}), //
+    new Platform({x: 4400, y: 556}),
+    new Platform({x: 4800, y: 556}),
 ]
 
 let jumpers = [
     new Jumper({x: 980, y: 500}), 
     new Jumper({x: 1130, y: 550}), 
     new Jumper({x: 1350, y: 400}), 
-    new Jumper({x: 1690, y: 500})
+    new Jumper({x: 1690, y: 500}),
+    new Jumper({x: 3400, y: 270}),
+    new Jumper({x: 3800, y: 556}),
+    new Jumper({x: 3900, y: 350}),
+    new Jumper({x: 4000, y: 150}),
 ]
 
 const keys = {
@@ -49,17 +61,29 @@ function reset(){
     platforms = [
         new Platform({x: 0, y: 556}), 
         new Platform({x: 400, y: 556}),
-        // new Platform({x: 800, y: 556}),
-        // new Platform({x: 1200, y: 556}),
-        // new Platform({x: 1600, y: 556}), 
+        // new Platform({x: 800, y: 556}), //
+        // new Platform({x: 1200, y: 556}), //
+        // new Platform({x: 1600, y: 556}), //
         new Platform({x: 2000, y: 556}),
+        new Platform({x: 2400, y: 556}),
+        new Platform({x: 2400, y: 420}),
+        new Platform({x: 2800, y: 420}),
+        // new Platform({x: 3200, y: 556}), //
+        // new Platform({x: 3600, y: 556}), //
+        // new Platform({x: 4000, y: 556}), //
+        new Platform({x: 4400, y: 556}),
+        new Platform({x: 4800, y: 556}),
     ]
     
     jumpers = [
         new Jumper({x: 980, y: 500}), 
         new Jumper({x: 1130, y: 550}), 
         new Jumper({x: 1350, y: 400}), 
-        new Jumper({x: 1690, y: 500})
+        new Jumper({x: 1690, y: 500}),
+        new Jumper({x: 3400, y: 270}),
+        new Jumper({x: 3800, y: 556}),
+        new Jumper({x: 3900, y: 350}),
+        new Jumper({x: 4000, y: 150}),
     ]
 
     scrollOffset = 0 //win condition
@@ -77,8 +101,6 @@ function winAdd() {
 function animate() {
     window.requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
-    // // c.fillStyle = "grey"
-    // c.fillRect(0, 0, canvas.width, canvas.height)
 
     player.velocity.x = 0
     if (keys.d.pressed && player.position.x < 500) {
@@ -134,12 +156,12 @@ function animate() {
     })
 
     //distance for win
-    if (scrollOffset == 2000) {
+    if (scrollOffset == 5000) {
         console.log("You Win") //win condition
         winAdd()
         document.getElementById("wins").innerHTML = "Wins: " + winCount; 
         // disable controls
-        // alert("You Win!")
+        alert("You Win!")
     } 
 
     if (player.position.y > canvas.height) {

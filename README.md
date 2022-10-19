@@ -21,4 +21,6 @@ index.js, index.html, and styles.css are not contained in any folder
 
 js folder contains event listeners and classes
 
-when player reaches the end a popup box should appear with the message "You Win!" (created a bug that stuck player direction to the right)
+when player reaches the end a popup box should appear with the message "You Win!" (created a bug that stuck player direction to the right to stop press "d")
+
+local storage has not been implemented
