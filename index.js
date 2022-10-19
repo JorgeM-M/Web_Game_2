@@ -13,8 +13,11 @@ let player = new Player()
 //platform poositions
 let platforms = [
     new Platform({x: 0, y: 556}), 
-    new Platform({x: 400, y: 556}), 
-    new Platform({x: 2000, y: 500}),
+    new Platform({x: 400, y: 556}),
+    // new Platform({x: 800, y: 556}),
+    // new Platform({x: 1200, y: 556}),
+    // new Platform({x: 1600, y: 556}), 
+    new Platform({x: 2000, y: 556}),
 ]
 
 let jumpers = [
@@ -45,8 +48,11 @@ function reset(){
     
     platforms = [
         new Platform({x: 0, y: 556}), 
-        new Platform({x: 400, y: 556}), 
-        new Platform({x: 2000, y: 500}),
+        new Platform({x: 400, y: 556}),
+        // new Platform({x: 800, y: 556}),
+        // new Platform({x: 1200, y: 556}),
+        // new Platform({x: 1600, y: 556}), 
+        new Platform({x: 2000, y: 556}),
     ]
     
     jumpers = [
@@ -131,7 +137,9 @@ function animate() {
     if (scrollOffset == 2000) {
         console.log("You Win") //win condition
         winAdd()
-        document.getElementById("wins").innerHTML = "Wins: " + winCount; // disable controls
+        document.getElementById("wins").innerHTML = "Wins: " + winCount; 
+        // disable controls
+        // alert("You Win!")
     } 
 
     if (player.position.y > canvas.height) {
@@ -140,8 +148,6 @@ function animate() {
         console.log(deathCount)
         document.getElementById("deaths").innerHTML = "Deaths: " + deathCount;
         reset()
-        
-        //deathcount()  add points to marker
     }
     
 }
