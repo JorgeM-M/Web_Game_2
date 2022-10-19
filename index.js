@@ -90,7 +90,7 @@ function reset(){
         new Jumper({x: 4000, y: 150}),
     ]
 
-    scrollOffset = 0 //win condition
+    scrollOffset = 0
 
 }
 
@@ -161,7 +161,7 @@ function animate() {
 
     //distance for win
     if (scrollOffset == 5000) {
-        console.log("You Win") //win condition
+        // console.log("You Win") //win condition
         winAdd()
         document.getElementById("wins").innerHTML = "Wins: " + winCount; 
         // disable controls
@@ -169,11 +169,12 @@ function animate() {
     } 
 
     if (player.position.y > canvas.height) {
-        console.log("you lose") //lose condition
+        // console.log("you lose") //lose condition
         deathAdd()
-        console.log(deathCount)
+        // console.log(deathCount)
         document.getElementById("deaths").innerHTML = "Deaths: " + deathCount;
         reset()
+        // alert("You Died!")
     }
     document.getElementById("winDeathRatio").innerHTML = "Win Death Ratio: " + (winCount/deathCount).toFixed(3);
     
