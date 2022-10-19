@@ -54,6 +54,10 @@ let deathCount = 0
 
 let winCount = 0
 
+// let winDeath = 0
+
+// let wD = winDeath.toFixed(3)
+
 //restarts game once dead
 function reset(){
     player = new Player()
@@ -171,6 +175,7 @@ function animate() {
         document.getElementById("deaths").innerHTML = "Deaths: " + deathCount;
         reset()
     }
+    document.getElementById("winDeathRatio").innerHTML = "Win Death Ratio: " + (winCount/deathCount).toFixed(3);
     
 }
 animate()
